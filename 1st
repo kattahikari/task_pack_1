@@ -1,0 +1,151 @@
+import java.util.Scanner;
+
+class task1 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int m = s.nextInt();
+        System.out.println(convert(m));
+    }
+    public static int convert(int m) {
+        int s = m * 60;
+        return s;
+    }
+}
+//
+//
+class task2 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int o2 = s.nextInt();
+        int o3 = s.nextInt();
+        o2 = o2 * 2;
+        o3 = o3 * 3;
+        int osum = o2 + o3;
+        System.out.println(points(o2,o3));
+    }
+        public static int points(int o2, int o3) {
+            int osum = o2 + o3;
+            return osum;
+    }
+}
+//
+//
+class task3 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int vic = s.nextInt();
+        int draw = s.nextInt();
+        int def = s.nextInt();
+        System.out.println(footballPoints(vic,draw,def));
+    }
+        public static int footballPoints(int vic, int draw, int def) {
+        int points = vic*3 + draw*1 + def*0;
+        return points;
+    }
+}
+//
+//
+class task4 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int five = s.nextInt();
+        System.out.println(divisibleByFive(five));
+    }
+    public static boolean divisibleByFive(int five) {
+        boolean divided;
+        if (five%5 == 0)
+            divided = true;
+        else
+            divided = false;
+        return divided;
+    }
+}
+//
+//
+class task5 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        boolean a = s.nextBoolean();
+        boolean b = s.nextBoolean();
+        System.out.println(and(a,b));
+    }
+    public static boolean and(boolean a, boolean b) {
+        boolean and = false;
+        if (a&&b == true)
+        and = true;
+        return and;
+    }
+}
+//
+//
+class task6 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n  = s.nextInt();
+        int w = s.nextInt();
+        int h  = s.nextInt();
+        System.out.println(howManyWalls(n,w,h));
+    }
+    public static int howManyWalls(int n, int w, int h) {
+        int amount = 0;
+        if (n > w*h)
+            amount = n/(w*h);
+        return amount;
+    }
+}
+//
+//
+class task7 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int a = s.nextInt();
+        System.out.println(squared(a));
+    }
+    public static int squared(int a) {
+        return a*a;
+    }
+}
+//
+//
+class task8 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        double prob = s.nextDouble();
+        double prize = s.nextDouble();
+        double pay = s.nextDouble();
+        System.out.println(profitableGamble(prob,prize,pay));
+    }
+    public static boolean profitableGamble(double prob, double prize, double pay) {
+        boolean profit = false;
+        if (prob*prize > pay)
+            profit = true;
+        return profit;
+    }
+}
+//
+//
+class task9 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int mins = s.nextInt();
+        int fps = s.nextInt();
+        System.out.println(frames(mins,fps));
+    }
+    public static int frames(int mins, int fps) {
+        return mins*60*fps;
+    }
+}
+//
+//
+class task10 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int first = s.nextInt();
+        int second = s.nextInt();
+        System.out.println(mod(first,second));
+    }
+    public static int mod(int first, int second) {
+        int divided = first/second;
+        return first-second*divided;
+    }
+}
