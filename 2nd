@@ -1,0 +1,198 @@
+import java.util.Scanner;
+
+class task1 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int l = s.nextInt();
+        System.out.println(oppositeHouse(n,l));
+    }
+    public static int oppositeHouse(int n, int l) {
+        return l*2 - (n - 1);
+    }
+}
+//
+//
+class task2 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String name = s.nextLine();
+        String surname = s.nextLine();
+        System.out.println(nameShuffle(name, surname));
+    }
+
+    public static String nameShuffle(String name, String surname) {
+        String rfn = (surname + " " + name);
+        return rfn;
+    }
+}
+//
+//
+class task3 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        double price = s.nextInt();
+        double percent = s.nextInt();
+        System.out.println(discount(price, percent));
+    }
+
+    public static double discount(double price, double percent) {
+        double overall = price - (price / 100) * percent;
+        return overall;
+    }
+}
+//
+//
+class task4 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int[] arr = new int[10];
+        for (int i = 0; i < 10; i++)
+            arr[i] = s.nextInt();
+        int max = arr[0];
+        int min = arr[0];
+        for (int i = 0; i < 10; i++) {
+            if (arr[i] > max)
+                max = arr[i];
+            if (arr[i] < min)
+                min = arr[i]; }
+            System.out.println(differenceMaxMin(min, max));
+
+    }
+    public static int differenceMaxMin(int min, int max) {
+        int difference = max - min;
+        return difference;
+    }
+}
+//
+//
+class task5 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int first = s.nextInt();
+        int second = s.nextInt();
+        int third = s.nextInt();
+        System.out.println(equal(first,second,third)); }
+        public static int equal(int first, int second, int third) {
+        int amount = 0;
+        if (first == second && second == third)
+            amount = 3;
+            else if (first != second && second != third && first != third)
+            amount = 0;
+            else
+                amount = 2;
+        return amount;
+    }
+}
+//
+//
+class task6 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String s1 = s.nextLine ();
+        System.out.println(reverse(s1));
+    }
+    public static String reverse(String s1) {
+        String r = "";
+        for (int i = 0; i < s1.length(); i++)
+            r = s1.charAt(i) + r;
+        return r;
+    }
+}
+//
+//
+class task7 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int first = s.nextInt();
+        int second = s.nextInt();
+        int third = s.nextInt();
+        System.out.println(programmers(first,second,third));
+
+    }
+    public static int programmers(int first, int second, int third) {
+        int max = first;
+        int min = first;
+        if (second > max)
+            max = second;
+        if (second < min)
+            min = second;
+        if (third > max)
+            max = third;
+        if (third < min)
+            min = third;
+        int dif = max - min;
+        return dif;
+    }
+}
+//
+//
+class task8 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String s1 = s.nextLine ();
+        System.out.println(getXO(s1));
+    }
+    public static boolean getXO(String s1) {
+        int x = 0;
+        int o = 0;
+        boolean xo = true;
+        for (char i : s1.toCharArray()) {
+            if (i == 'x')
+                x++;
+            if (i == 'o')
+                o++; }
+        if (x == o)
+            xo = true;
+        else
+            xo = false;
+        return xo;
+    }
+}
+//
+//
+class task9 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String s1 = s.nextLine ();
+        s1 = s1.toLowerCase();
+        if (bomb(s1))
+            System.out.print("ПРИГНИСЬ!");
+        else
+            System.out.print("Расслабься, бомбы нет.");
+    }
+    public static boolean bomb(String s1) {
+        boolean boom = false;
+        if (s1.contains("бомб"))
+            boom = true;
+        else
+            boom = false;
+        return boom;
+    }
+}
+//
+//
+class task10 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String s1 = s.nextLine ();
+        String s2 = s.nextLine ();
+        System.out.println(sameAscii(s1,s2));
+    }
+    public static boolean sameAscii(String s1, String s2) {
+        boolean sum = false;
+        int finalfirst = 0;
+        int finalsecond = 0;
+        for (char i : s1.toCharArray()) {
+            int first = (int) i;
+            finalfirst = finalfirst + first; }
+        for (char i : s2.toCharArray()) {
+            int second = (int) i;
+            finalsecond = finalsecond + second; }
+        if (finalfirst == finalsecond)
+            sum = true;
+        if (finalfirst != finalsecond)
+            sum = false;
+        return sum;
+    }
+}
