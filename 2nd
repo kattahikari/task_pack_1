@@ -22,8 +22,7 @@ class task2 {
     }
 
     public static String nameShuffle(String name, String surname) {
-        String rfn = (surname + " " + name);
-        return rfn;
+         return (surname + " " + name);
     }
 }
 //
@@ -37,8 +36,8 @@ class task3 {
     }
 
     public static double discount(double price, double percent) {
-        double overall = price - (price / 100) * percent;
-        return overall;
+        return price - (price / 100) * percent;
+
     }
 }
 //
@@ -60,8 +59,8 @@ class task4 {
 
     }
     public static int differenceMaxMin(int min, int max) {
-        int difference = max - min;
-        return difference;
+        return max - min;
+
     }
 }
 //
@@ -72,7 +71,8 @@ class task5 {
         int first = s.nextInt();
         int second = s.nextInt();
         int third = s.nextInt();
-        System.out.println(equal(first,second,third)); }
+        System.out.println(equal(first, second, third));
+    }
         public static int equal(int first, int second, int third) {
         int amount = 0;
         if (first == second && second == third)
@@ -121,8 +121,7 @@ class task7 {
             max = third;
         if (third < min)
             min = third;
-        int dif = max - min;
-        return dif;
+        return max - min;
     }
 }
 //
