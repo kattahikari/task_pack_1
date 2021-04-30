@@ -3,12 +3,11 @@ import java.util.Scanner;
 class task1 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int m = s.nextInt();
-        System.out.println(convert(m));
+        int minutes = s.nextInt();
+        System.out.println(convert(minutes));
     }
-    public static int convert(int m) {
-        int s = m * 60;
-        return s;
+    public static int convert(int minutes) {
+        return minutes * 60;
     }
 }
 //
@@ -16,16 +15,15 @@ class task1 {
 class task2 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int o2 = s.nextInt();
-        int o3 = s.nextInt();
-        o2 = o2 * 2;
-        o3 = o3 * 3;
-        int osum = o2 + o3;
-        System.out.println(points(o2,o3));
+        int twopoints = s.nextInt();
+        int threepoints = s.nextInt();
+        System.out.println(points(twopoints,threepoints));
     }
-        public static int points(int o2, int o3) {
-            int osum = o2 + o3;
-            return osum;
+        public static int points(int twopoints, int threepoints) {
+            twopoints = twopoints * 2;
+            threepoints = threepoints * 3;
+            return twopoints + threepoints;
+
     }
 }
 //
@@ -33,14 +31,13 @@ class task2 {
 class task3 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int vic = s.nextInt();
+        int victory = s.nextInt();
         int draw = s.nextInt();
-        int def = s.nextInt();
-        System.out.println(footballPoints(vic,draw,def));
+        int defeat = s.nextInt();
+        System.out.println(footballPoints(victory,draw,defeat));
     }
-        public static int footballPoints(int vic, int draw, int def) {
-        int points = vic*3 + draw*1 + def*0;
-        return points;
+        public static int footballPoints(int victory, int draw, int defeat) {
+        return victory*3 + draw*1 + defeat*0;
     }
 }
 //
